@@ -18,7 +18,6 @@ class UsersTableSeeder extends Seeder
                 'name' => 'test',
                 'email' => 'test@test.com',
                 'password' => 'testtesttest',
-                'circle_id' => 1,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

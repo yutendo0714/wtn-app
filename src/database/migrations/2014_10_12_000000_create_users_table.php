@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->foreignId('circle_id')->constrained('circles');
             $table->rememberToken();
             $table->timestamps();
         });
