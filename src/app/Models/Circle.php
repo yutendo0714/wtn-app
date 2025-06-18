@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Circle extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+    ];
+
+    public function userProfile()
+    {
+        return $this->hasMany(UserProfile::class);
+    }
 }

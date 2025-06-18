@@ -5,14 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Message extends Model
+class UserProfile extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'user_id',
-        'chat_room_id',
-        'content',
+        'circle_id',
     ];
 
     public function user()
@@ -20,8 +19,8 @@ class Message extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function chatRoom()
+    public function circle()
     {
-        return $this->belongsTo(ChatRoom::class);
+        return $this->belongsTo(Circle::class);
     }
 }

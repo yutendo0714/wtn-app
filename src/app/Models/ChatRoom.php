@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class ChatRoom extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'practice_id',
+    ];
+
+    public function practice()
+    {
+        return $this->belongsTo(Practice::class);
+    }
+
+    public function message()
+    {
+        return $this->hasMany(Message::class);
+    }
 }
