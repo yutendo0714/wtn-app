@@ -18,7 +18,7 @@ class ChatRoom extends Model
         return $this->belongsTo(Practice::class);
     }
 
-    public function message()
+    public function messages()
     {
         return $this->hasMany(Message::class);
     }

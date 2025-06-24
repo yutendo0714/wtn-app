@@ -16,6 +16,6 @@ class Category extends Model
 
     public function practice()
     {
-        return $this->hasMany(Practice::class);
+        return $this->hasOne(Practice::class);
     }
 }

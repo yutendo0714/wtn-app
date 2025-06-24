@@ -17,9 +17,14 @@ class Practice extends Model
         'end_at',
     ];
 
-    public function player()
+    public function players()
     {
         return $this->hasMany(Player::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 
     public function location()

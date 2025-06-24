@@ -15,6 +15,6 @@ class Circle extends Model
 
     public function userProfile()
     {
-        return $this->hasMany(UserProfile::class);
+        return $this->hasOne(UserProfile::class);
     }
 }

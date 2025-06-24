@@ -50,11 +50,16 @@ class User extends Authenticatable
 
     public function player()
     {
-        return $this->hasMany(Player::class);
+        return $this->hasOne(Player::class);
+    }
+
+    public function practice()
+    {
+        return $this->hasOne(Practice::class);
     }
 
     public function message()
     {
-        return $this->hasMany(Message::class);
+        return $this->hasOne(Message::class);
     }
 }
