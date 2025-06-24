@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('practices', function (Blueprint $table) {
             $table->id();
             // $table->string('title');
-            $table->foreignId('owner_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('location_id')->constrained('locations');
             $table->foreignId('category_id')->constrained('categories');
             $table->dateTime('start_at');

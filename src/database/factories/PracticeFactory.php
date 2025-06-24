@@ -21,7 +21,7 @@ class PracticeFactory extends Factory
     {
         return [
             // 'title' => $this->faker->sentence(),
-            'owner_id' => User::inRandomOrder()->first()->id,
+            'user_id' => User::inRandomOrder()->first()->id,
             'location_id' => Location::inRandomOrder()->first()->id,
             'category_id' => Category::inRandomOrder()->first()->id,
             'start_at' => $this->faker->dateTimeBetween('now', '+1 month'),
