@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Practice;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class PracticeController extends Controller
 {
@@ -12,7 +13,13 @@ class PracticeController extends Controller
      */
     public function index()
     {
-        //
+        $practices = Practice::with(['user', 'players', 'location', 'category'])
+            ->orderBy('start_at', 'asc')
+            ->get();
+
+        return Inertia::render('Practice/Index', [
+            'practices' => $practices,
+        ]);
     }
 
     /**
