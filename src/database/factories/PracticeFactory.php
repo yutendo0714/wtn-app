@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\User;
 use App\Models\Location;
 use App\Models\Category;
 
@@ -20,6 +21,7 @@ class PracticeFactory extends Factory
     {
         return [
             // 'title' => $this->faker->sentence(),
+            'owner_id' => User::inRandomOrder()->first()->id,
             'location_id' => Location::inRandomOrder()->first()->id,
             'category_id' => Category::inRandomOrder()->first()->id,
             'start_at' => $this->faker->dateTimeBetween('now', '+1 month'),
