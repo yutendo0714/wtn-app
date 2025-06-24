@@ -19,7 +19,7 @@ class PracticeFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this->faker->sentence(),
+            // 'title' => $this->faker->sentence(),
             'location_id' => Location::inRandomOrder()->first()->id,
             'category_id' => Category::inRandomOrder()->first()->id,
             'start_at' => $this->faker->dateTimeBetween('now', '+1 month'),

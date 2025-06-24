@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('practices', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            // $table->string('title');
             $table->foreignId('location_id')->constrained('locations');
             $table->foreignId('category_id')->constrained('categories');
             $table->dateTime('start_at');
