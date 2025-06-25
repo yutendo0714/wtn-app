@@ -1,5 +1,4 @@
-import react from "react";
-import ApplicationLogo from "@/Components/ApplicationLogo";
+import React from "react";
 import Header from "@/Components/header";
 import PrimaryButton from "@/Components/PrimaryButton";
 
